@@ -166,9 +166,11 @@
         }
 
         .img-portfolio img {
-            width: 50%;
+            width: 80%;
+            height: 80%;
             position: absolute;
             bottom: 0;
+            right: 10px;
         }
 
         .intro {
@@ -593,17 +595,17 @@
 
         .slide-row {
             transition: 0.9s;
-            width: 2000px;
+            width: 1480px;
             display: flex;
         }
 
         .slide-col {
-            width: 500px;
+            width: 370px;
             position: relative;
         }
 
         .slider-container {
-            width: 500px;
+            width: 370px;
             position: absolute;
             top: 20%;
             left: 50%;
@@ -651,6 +653,7 @@
             align-items: center;
             flex-direction: column;
             padding: 10rem 0rem;
+            transition: 5s;
         }
 
         .contact-flex {
@@ -706,6 +709,9 @@
         }
 
         .inbox-contact {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
             display: flex;
             flex-direction: column;
         }
@@ -716,7 +722,7 @@
         }
 
         .inbox-contact input[type="name"] {
-            width: 60%;
+            width: 300px;
             padding: 1rem 1rem;
             outline: none;
             border: 1px solid #4db5ff6f;
@@ -731,7 +737,7 @@
         }
 
         .inbox-contact input[type="email"] {
-            width: 60%;
+            width: 300px;
             outline: none;
             border: 1px solid #4db5ff6f;
             background: transparent;
@@ -746,7 +752,7 @@
         }
 
         .inbox-contact input[type="textarea"] {
-            width: 60%;
+            width: 300px;
             height: 150px;
             max-height: 150px;
             overflow-y: scroll;
@@ -785,6 +791,121 @@
         }
 
         /* <!---------------- Responsive Design Mobile View ---------------------> */
+
+
+
+        @media screen and (max-width:896px) {
+            .card-inner img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .card-inner {
+                width: 200px;
+                height: 200px;
+            }
+
+            .card-outer {
+                width: 200px;
+                height: 200px;
+            }
+
+            .skills-container {
+                padding: 2.4rem 3rem;
+            }
+
+            .contact-flex {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width:825px) {
+            .skills-container {
+                padding: 2.4rem 2rem;
+            }
+
+            .contact-flex {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media screen and (max-width:768px) {
+            .skills-container {
+                padding: 2.4rem 1rem;
+            }
+
+            .contact-flex {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media screen and (max-width:708px) {
+            .flex {
+                flex-direction: column;
+            }
+
+            .skills-container {
+                padding: 2.4rem 4rem;
+            }
+
+            .contact-flex {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width:581px) {
+            .aboutus {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .about-content {
+                width: 100%;
+            }
+
+            .flex {
+                flex-direction: column;
+            }
+
+            .skills-container {
+                padding: 2.4rem 4rem;
+            }
+
+            .contact-flex {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 513px) {
+
+            .skill-body {
+                transition: 0.9s;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .contact-flex {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
 
         @media screen and (max-width:406px) {
             .img-portfolio {
@@ -836,82 +957,11 @@
                 display: grid;
                 grid-template-columns: 1fr;
             }
-        }
 
-        @media screen and (max-width:896px) {
-            .card-inner img {
-                width: 200px;
-                height: 200px;
-            }
-
-            .card-inner {
-                width: 200px;
-                height: 200px;
-            }
-
-            .card-outer {
-                width: 200px;
-                height: 200px;
-            }
-
-            .skills-container {
-                padding: 2.4rem 3rem;
-            }
-        }
-
-        @media screen and (max-width: 513px) {
-
-            .skill-body {
-                transition: 0.9s;
+            .contact-flex {
+                width: 100%;
                 display: grid;
                 grid-template-columns: 1fr;
-            }
-        }
-
-        @media screen and (max-width:825px) {
-            .skills-container {
-                padding: 2.4rem 2rem;
-            }
-
-        }
-
-        @media screen and (max-width:768px) {
-            .skills-container {
-                padding: 2.4rem 1rem;
-            }
-
-        }
-
-        @media screen and (max-width:708px) {
-            .flex {
-                flex-direction: column;
-            }
-
-            .skills-container {
-                padding: 2.4rem 4rem;
-            }
-        }
-
-        @media screen and (max-width:581px) {
-            .aboutus {
-                width: 100%;
-                flex-direction: column;
-            }
-
-            .card {
-                width: 100%;
-            }
-
-            .about-content {
-                width: 100%;
-            }
-
-            .flex {
-                flex-direction: column;
-            }
-
-            .skills-container {
-                padding: 2.4rem 4rem;
             }
         }
     </style>
@@ -959,7 +1009,7 @@
                 <button class="btn2 btn" id="chat"> Let's Talk</button>
             </div>
             <div class="img-portfolio">
-                <img src="img/me.png" alt="PortFolio-IMAGE">
+                <img src="img/Remove-Blue.png" alt="PortFolio-IMAGE">
             </div>
         </div>
 
@@ -974,7 +1024,7 @@
                 <div class="card">
                     <div class="card-outer">
                         <div class="card-inner">
-                            <img src="img/me-about.jpg" alt="About Us">
+                            <img src="img/Blue-Picture.jpg" alt="About Us">
                         </div>
                     </div>
                 </div>
@@ -1333,28 +1383,28 @@
             this.classList.add("active");
         }
         btn[1].onclick = function () {
-            slide.style.transform = "translateX(-500px)";
+            slide.style.transform = "translateX(-370px)";
             for (i = 0; i < 4; i++) {
                 btn[i].classList.remove("active");
             }
             this.classList.add("active");
         }
         btn[2].onclick = function () {
-            slide.style.transform = "translateX(-1000px)";
+            slide.style.transform = "translateX(-740px)";
             for (i = 0; i < 4; i++) {
                 btn[i].classList.remove("active");
             }
             this.classList.add("active");
         }
         btn[3].onclick = function () {
-            slide.style.transform = "translateX(-1500px)";
+            slide.style.transform = "translateX(-1110px)";
             for (i = 0; i < 4; i++) {
                 btn[i].classList.remove("active");
             }
             this.classList.add("active");
         }
 
-    // <!-- --------------/JS-------------- -->
+    // <!-- --------------Responsiveness Slider/JS-------------- -->
 
     // <!-- --------------/JS-------------- -->
     </script>

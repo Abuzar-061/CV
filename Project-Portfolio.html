@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="Portfolio maker,Online portfolio builder,Portfolio creation,Portfolio design,Personal portfolio,Digital portfolio,Portfolio website,Portfolio templates,Creative portfolio,Portfolio showcase,Portfolio customization,Visual portfolio,Portfolio management,Portfolio organization,Portfolio presentation.">
+    <meta name="description"
+        content="I'm a professional web developer with 2 years experience. I've always had a passion for technology and the internet.">
+    <title>Portolio-Website</title>
+    <!-- --------------------- Favicon ------------------------ -->
+    <link rel="shortcut icon" href="img/wings.png" type="image/x-icon">
+    <!------------------------ Ion-Icon Link --------------------->
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <!-- --------------------- Styling ------------------------ -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    transition: 0.8s;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background-color: #1f1f38;
+    --bg-variant: #2c2c6c;
+    --primary-color: #4db5ff;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+}
+
+html::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    display: none;
+}
+
+.message::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    display: none;
+}
+
+/* --------------- sticky-Social-Icon ------------ */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    margin: 0 10px;
+    line-height: 40px;
+    z-index: 10000;
+}
+
+.social-icon ion-icon {
+    cursor: pointer;
+    z-index: 999;
+    font-size: 20px;
+    color: #4db5ff;
+}
+
+.break {
+    color: #4db5ff;
+    font-size: 60px;
+}
+
+/* --------------- sticky-Scroll-Down ------------ */
+
+.sticky-scroll {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+    color: #4db5ff;
+}
+
+.sticky-scroll .transform {
+    writing-mode: vertical-lr;
+    transform: rotate(360deg);
+}
+
+/* --------------- sticky-nav ------------ */
+.sticky-nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 10%;
+    z-index: 2;
+}
+
+.sticky-nav ul {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(40px);
+    width: max-content;
+    border-radius: 35px;
+    padding: 10px 40px;
+    display: flex;
+}
+
+.sticky-nav li {
+    margin: 0 2px;
+    padding: 0 10px;
+}
+
+.sticky-nav a {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.sticky-nav a ion-icon {
+    font-size: 25px;
+}
+
+/* ---------- Container ---------- */
+.main-container {
+    background: var(--background-color);
+    background-image: url(img/bg-texture.png);
+}
+
+.container {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------------------ HOME ------------------------------- */
+.home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img-portfolio {
+    width: 300px;
+    height: 55%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 44%;
+    border-top-left-radius: 44%;
+    overflow: hidden;
+    background: linear-gradient(#4db5ff, #4db5ff17);
+    transition: 0.8s ease-in-out;
+}
+
+.img-portfolio img {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.intro {
+    text-align: center;
+    color: white;
+}
+
+.water-animation {
+    color: #4db5ff;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        clip-path: polygon(99% 49%, 86% 43%, 74% 41%, 62% 43%, 50% 49%, 39% 57%, 25% 61%, 12% 58%, 0 51%, 0 100%, 100% 100%);
+    }
+
+    50% {
+        clip-path: polygon(99% 49%, 91% 58%, 77% 65%, 64% 60%, 50% 49%, 39% 42%, 28% 39%, 13% 44%, 0 51%, 0 100%, 100% 100%);
+
+    }
+}
+
+.font {
+    font-family: 'Poppins';
+}
+
+.typed-text-animation {
+    font-family: 'poppins';
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    color: gray;
+    animation: typing 0.5s steps(20), blink .5s step-end infinite;
+    white-space: nowrap;
+}
+
+/* ------------------------------ Button ------------------------------- */
+.btns {
+    width: 100%;
+    font-family: 'poppins';
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    transition: 0.8s;
+    padding: 0.75rem 1.2rem;
+    width: max-content;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    border: 0;
+}
+
+.btn1 {
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.btn1 a {
+    color: var(--primary-color);
+}
+
+.btn1:hover {
+    background-color: #4db5ff;
+    color: #1f1f38;
+    box-shadow: 0 0 10px #4db5ff, 0 0 30px #4db5ff, 0 0 70px #4db5ff;
+}
+
+.btn1 a:hover {
+    color: #1f1f38;
+}
+
+.btn2 {
+    background-color: #4db5ff;
+}
+
+.btn2:hover {
+    box-shadow: 0 0 10px #4db5ff, 0 0 30px #4db5ff, 0 0 70px #4db5ff;
+}
+
+/* <!----------------- About Me --------------------> */
+
+.About {
+    height: max-content;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.Get-To-Know {
+    color: rgb(171, 170, 170);
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+.about-heading {
+    text-align: center;
+}
+
+.about-heading h1 {
+    font-weight: bold;
+    color: #4db5ff;
+}
+
+.aboutus {
+    width: 100%;
+    display: flex;
+}
+
+.card {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.card-outer {
+    transition: 0.9s;
+    width: 350px;
+    height: 350px;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, var(--primary-color), transparent);
+    display: grid;
+    place-items: center;
+}
+
+.card-inner img {
+    transition: 0.9s;
+    width: 350px;
+    height: 350px;
+}
+
+.card-inner {
+    transition: 0.9s;
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: 0.9s;
+}
+
+.card-inner:hover {
+    transform: rotate(-10deg);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.about-me {
+    cursor: pointer;
+    width: 130px;
+    height: 130px;
+    background-color: #2c2c6c;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-me:hover {
+    background-color: var(--color-primary-variant);
+}
+
+.about-me ion-icon {
+    font-weight: bold;
+    font-size: 30px;
+    color: #4db5ff;
+}
+
+.about-me h2 {
+    color: white;
+    font-size: 15px;
+    font-family: 'Poppins';
+}
+
+.about-me p {
+    font-size: 10px;
+}
+
+.about-content {
+    width: 50%;
+    padding: 30px;
+    text-align: center;
+}
+
+.about-content p {
+    text-align: justify;
+    color: rgb(171, 170, 170);
+}
+
+.btn-customize {
+    margin-top: 10px;
+}
+
+/* <!----------------------- Skills Section --------------------->  */
+
+.skills {
+    width: 100%;
+    height: max-content;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skills-heading {
+    margin: 70px 0;
+    width: 100%;
+    text-align: center;
+    color: #4db5ff;
+    flex-direction: column;
+}
+
+.skills-heading h4 {
+    font-family: 'Poppins';
+    color: rgb(171, 170, 170);
+}
+
+.flex {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    gap: 2rem;
+    display: flex;
+}
+
+.skills-container {
+    margin: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c2c6c;
+    padding: 2.4rem 4rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+}
+
+.skill-body {
+    transition: 0.9s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.skill-head {
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #4db5ff;
+}
+
+.flexx {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.two {
+    color: white;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+}
+
+.two img {
+    margin: 0 5px;
+}
+
+/* <!------------------- Services Section ---------------------> */
+
+.services {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    position: relative;
+}
+
+.service-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.cd {
+    background-color: var(--bg-variant);
+    overflow: hidden;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid #4db5ff;
+}
+
+.cd:hover {
+    cursor: pointer;
+    background: transparent;
+}
+
+.cd-head {
+    color: #1f1f38;
+    font-family: 'poppins';
+    font-size: 20px;
+    background-color: #4db5ff;
+    padding: 1.5rem 3rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.cd ion-icon {
+    color: gray;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.card-content {
+    font-family: sans-serif;
+}
+
+.cd-body {
+    text-align: justify;
+}
+
+.card-content {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* <!------------------ Testimonial/Reviews Section --------------------> */
+.reviews {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.reviews-head {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews .scroll {
+    color: #4db5ff;
+}
+
+.reviews h4 {
+    font-family: 'poppins';
+    color: rgb(171, 170, 170);
+}
+
+.reviews p {
+    color: rgb(171, 170, 170);
+}
+
+.reviews .slide-col {
+    border-radius: 20px;
+    background-color: #2c2c6c;
+    padding: 4rem 3rem;
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-text p {
+    text-align: justify;
+    font-family: 'poppins';
+}
+
+.user-text h3 {
+    margin: 10px 0;
+    font-family: 'Clicker Script', cursive;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+.style {
+    font-family: 'Clicker Script', cursive;
+    font-size: 50px;
+    color: #4db5ff;
+}
+
+.user-img img {
+    width: 100px;
+    height: 100px;
+    border: 7px solid #4b4b7e;
+    border-radius: 50%;
+}
+
+.slide-row {
+    transition: 0.9s;
+    width: 1480px;
+    display: flex;
+}
+
+.slide-col {
+    width: 370px;
+    position: relative;
+}
+
+.slider-container {
+    width: 370px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.indicator {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10%;
+}
+
+.indicator-btn {
+    transition: 0.9s;
+    height: 10px;
+    width: 10px;
+    margin: 4px;
+    border-radius: 10px;
+    background-color: rgb(171, 170, 170);
+    cursor: pointer;
+}
+
+.testimonial {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.active {
+    transition: 0.9s;
+    background-color: #4db5ff;
+    width: 25px;
+}
+
+/* <!---------------- Contact Section ---------------------> */
+
+
+.contact {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10rem 0rem;
+    transition: 5s;
+}
+
+.contact-flex {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-contact ion-icon {
+    color: white;
+    font-size: 25px;
+
+}
+
+.box-contact {
+    margin: 1rem 0;
+    background-color: #2c2c6c;
+    border-radius: 20px;
+    width: 235px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-contact h4 {
+    font-weight: lighter;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: rgb(171, 170, 170);
+}
+
+.box-contact h3 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.box-contact p a {
+    font-size: 12px;
+    font-family: 'Poppins';
+    font-weight: bolder;
+    color: #4db5ff;
+}
+
+.inbox-contact {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.inbox-contact input {
+    display: block;
+    margin: 1rem 10px;
+}
+
+.inbox-contact input[type="name"] {
+    width: 300px;
+    padding: 1rem 1rem;
+    outline: none;
+    border: 1px solid #4db5ff6f;
+    background: transparent;
+    border-radius: 5px;
+    color: #4db5ff;
+}
+
+.inbox-contact input[type="name"]:focus {
+    background-color: transparent;
+    box-shadow: 0 0 2px #4db5ff, 0 0 1px #4db5ff, 0 0 9px #4db5ff, 0 0 3px #4db5ff;
+}
+
+.inbox-contact input[type="email"] {
+    width: 300px;
+    outline: none;
+    border: 1px solid #4db5ff6f;
+    background: transparent;
+    border-radius: 5px;
+    padding: 1rem 1rem;
+    color: #4db5ff;
+}
+
+.inbox-contact input[type="email"]:focus {
+    background-color: transparent;
+    box-shadow: 0 0 2px #4db5ff, 0 0 1px #4db5ff, 0 0 9px #4db5ff, 0 0 3px #4db5ff;
+}
+
+.inbox-contact input[type="textarea"] {
+    width: 300px;
+    height: 150px;
+    max-height: 150px;
+    overflow-y: scroll;
+    outline: none;
+    border: 1px solid #4db5ff6f;
+    background: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    color: #4db5ff;
+}
+
+.inbox-contact input[type="textarea"]:focus {
+    box-shadow: 0 0 2px #4db5ff, 0 0 1px #4db5ff, 0 0 9px #4db5ff, 0 0 3px #4db5ff;
+}
+
+form input[type="button"] {
+    padding: 1rem;
+    background-color: #4db5ff;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins';
+}
+
+form input[type="button"]:hover {
+    box-shadow: 0 0 20px #4db5ff, 0 0 40px #4db5ff, 0 0 60px #4db5ff;
+    cursor: pointer;
+}
+
+.box-contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+input ::placeholder {
+    font-family: sans-serif;
+}
+
+/* <!---------------- Footer ---------------------> */
+.footer{
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #4db5ff;
+}
+.footer-logo{
+    position: absolute;
+    top: 140px;
+    font-family: 'Poppins';
+    color: #2c2c6c;
+}
+.footer-navbar ul{
+    display: flex;
+    gap: 12px;
+}
+.footer-navbar a{
+    color: #2c2c6c;
+}
+.footer-icon{
+    position: relative;
+    top: 30px;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+.footer-icon a{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-icon ion-icon{
+    color: black;
+}
+.footer-icon ion-icon:hover{
+    color: white;
+}
+
+/* <!---------------- Responsive Design Mobile View ---------------------> */
+
+
+
+@media screen and (max-width:896px) {
+    .card-inner img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-inner {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-outer {
+        width: 200px;
+        height: 200px;
+    }
+
+    .skills-container {
+        padding: 2.4rem 3rem;
+    }
+
+    .contact-flex {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+}
+
+@media screen and (max-width:825px) {
+    .skills-container {
+        padding: 2.4rem 2rem;
+    }
+
+    .contact-flex {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+}
+
+@media screen and (max-width:768px) {
+    .skills-container {
+        padding: 2.4rem 1rem;
+    }
+
+    .contact-flex {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+      .footer-navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+}
+
+@media screen and (max-width:708px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .skills-container {
+        padding: 2.4rem 4rem;
+    }
+
+    .contact-flex {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+      .footer-navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+}
+
+@media screen and (max-width:581px) {
+    .aboutus {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .skills-container {
+        padding: 2.4rem 4rem;
+    }
+
+    .contact-flex {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+      .footer-navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+}
+
+@media screen and (max-width: 513px) {
+
+    .skill-body {
+        transition: 0.9s;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-flex {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+      .footer-navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+}
+
+@media screen and (max-width:406px) {
+    .img-portfolio {
+        width: 200px;
+    }
+
+    .img-portfolio img {
+        width: 70%;
+        height: 80%;
+    }
+
+    .aboutus {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .card-inner img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-inner {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-outer {
+        width: 200px;
+        height: 200px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .skills-container {
+        padding: 2.4rem 1rem;
+    }
+
+    .skill-body {
+        transition: 0.9s;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-flex {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+      .footer-navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <!---------------- Sticky-Social-icon ----------->
+        <div class="social-icon">
+            <li><a href="https://github.com/Abuzar-061" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+            </li>
+            <li><a href="https://twitter.com/Alpha_Dev_061" target="_blank"><ion-icon
+                        name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.facebook.com/abuzar.munir.545/" target="_blank"><ion-icon
+                        name="logo-facebook"></ion-icon></a></li>
+            <li><span class="break">|</span></li>
+        </div>
+        <!---------------- Sticky-Scoll-Down ----------->
+        <div class="sticky-scroll">
+            <li class="transform">Scroll Down</li>
+        </div>
+
+        <!---------------- Sticky-Nav ------------------->
+        <div class="sticky-nav">
+            <ul>
+                <li><a href="#home"><ion-icon name="home-outline"></ion-icon></a></li>
+                <li><a href="#about"><ion-icon name="person-outline"></ion-icon></a></li>
+                <li><a href="#skills"><ion-icon name="file-tray-full-outline"></ion-icon></a></li>
+                <li><a href="#services"><ion-icon name="medkit-outline"></ion-icon></a></li>
+                <li><a href="#reviews"><ion-icon name="chatbubbles-outline"></ion-icon></a></li>
+            </ul>
+        </div>
+
+        <!------------------- Home ---------------------->
+
+        <div class="container home" id="home">
+            <div class="intro">
+                <h4 class="font">Hello I'm</h4>
+                <h1 class="water-animation">Muhammad Abuzar</h1>
+                <p class="typed-text-animation"></p>
+            </div>
+            <div class="btns">
+                <button class="btn1 btn"><a href="Muhammad.docx" download>Download CV</a></button>
+                <button class="btn2 btn" id="chat"> Let's Talk</button>
+            </div>
+            <div class="img-portfolio">
+                <img src="img/Remove-Blue.png" alt="PortFolio-IMAGE">
+            </div>
+        </div>
+
+        <!----------------- About Me -------------------->
+
+        <div class="container About" id="about">
+            <div class="about-heading">
+                <p class="Get-To-Know">Get To Know</p>
+                <h1 class="about-page">About Me</h1>
+            </div>
+            <div class="aboutus">
+                <div class="card">
+                    <div class="card-outer">
+                        <div class="card-inner">
+                            <img src="img/Blue-Picture.jpg" alt="About Us">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="cards">
+                        <div class="about-me">
+                            <ion-icon name="ribbon-outline"></ion-icon>
+                            <h2 class="experience-page">Experience</h2>
+                            <p class="experience">3+ Year Experience</p>
+                        </div>
+                        <div class="about-me">
+                            <ion-icon name="people-outline"></ion-icon>
+                            <h2 class="scroll">Clients</h2>
+                            <p class="clients">300+ worldwide</p>
+                        </div>
+                        <div class="about-me">
+                            <ion-icon name="folder-outline"></ion-icon>
+                            <h2 class="scroll">Projects</h2>
+                            <p class="projects">100+ Completed</p>
+                        </div>
+                    </div>
+                    <p>As a versatile professional with expertise in web development, SEO (Search Engine Optimization),
+                        and UI/UX (User
+                        Interface/User Experience) design, I am passionate about creating impactful digital experiences.
+                        With 3+ years of
+                        experience in the industry, I have honed my skills in various areas, allowing me to offer a
+                        unique blend of technical
+                        expertise and design sensibilities.</p>
+                    <button class="btn btn2 btn-customize" id="whatschat">Let's Talk</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!------------------- SKills -------------------->
+
+        <div class="container skills" id="skills">
+            <div class="skills-heading">
+                <h4>What Skills I Have</h4>
+                <h1 class="scroll">My Experience</h1>
+            </div>
+            <div class="flex">
+                <div class="skills-container skills-card-left">
+                    <div class="skill-head">
+                        <h3>
+                            <li style="list-style: disc;" class="scroll">Frontend Development</li>
+                        </h3>
+                    </div>
+                    <div class="skill-body">
+                        <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                            <h3>Html</h3>
+                        </div>
+                        <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                            <h3>ReactJS</h3>
+                        </div>
+                        <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                            <h3>BootStrap</h3>
+                        </div>
+                        <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                            <h3>Tailwind CSS</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-container skills-card-right">
+                    <div class="skill-head">
+                        <h3>
+                            <li style="list-style: disc;" class="scroll">Backend Development</li>
+                        </h3>
+                        <div class="skill-body">
+                            <div class="two">
+                                <img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                                <h3>PHP</h3>
+                            </div>
+                            <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                                <h3>MYSQL</h3>
+                                <p></p>
+                            </div>
+                            <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                                <h3>Python</h3>
+                            </div>
+                            <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                                <h3>MongoDB</h3>
+                            </div>
+                            <div class="two"><img src="img/verified.png" width="20px" height="20px" alt="verified-Icon">
+                                <h3>Laravel</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!------------------ Services Section -------------------->
+
+        <div class="container services" id="services">
+            <div class="skills-heading service-head">
+                <h4>What I Offer</h4>
+                <h1 class="scroll">Services</h1>
+            </div>
+            <div class="service-card">
+                <div class="card1 cd">
+                    <div class="cd-head">
+                        <div class="scroll">UI/UX Desgin</div>
+                    </div>
+                    <div class="cd-body">
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Keyword research</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>On-page optimization
+                        </div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Technical SEO</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Link building</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Content creation</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Content optimization
+                        </div>
+                    </div>
+                </div>
+                <div class="card2 cd">
+                    <div class="cd-head">
+                        <div class="scroll">Web Developement</div>
+                    </div>
+                    <div class="cd-body">
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Website Design and
+                            Development</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Custom Web Development
+                        </div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Ecommerce Website
+                            Development</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>CMS Development</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Responsive Design</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Website Maintainence and
+                            Updates
+                        </div>
+                    </div>
+                </div>
+                <div class="card3 cd">
+                    <div class="cd-head">
+                        <div class="scroll">SEO Optimization</div>
+                    </div>
+                    <div class="cd-body">
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Keyword research</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>On-page optimization
+                        </div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Technical SEO</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Link building</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Content creation</div>
+                        <div class="card-content"><ion-icon name="checkmark-outline"></ion-icon>Content optimization
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------------ Testimonial/Reviews Section -------------------->
+
+        <div class="container reviews" id="reviews">
+            <div class="reviews-head">
+                <h4>Review from clients</h4>
+                <h1 class="scroll">Testimonial</h1>
+            </div>
+            <div class="slider-container">
+                <div class="indicator">
+                    <span class="indicator-btn active"></span>
+                    <span class="indicator-btn"></span>
+                    <span class="indicator-btn"></span>
+                    <span class="indicator-btn"></span>
+                </div>
+                <div class="testimonial">
+                    <div class="slide-row" id="slide">
+                        <div class="slide-col">
+                            <div class="user-img">
+                                <img src="img/avatar4.jpg" alt="Clients">
+                            </div>
+                            <div class="user-text">
+                                <h3 class="scroll"><span class="style">A</span>va Leo</h3>
+                                <p>With Abuzar's help, we were able to increase the functionality of our website
+                                    dramatically while cutting our costs. Our
+                                    website is much more easy to use, has tons of more features than before and is
+                                    incredibly easy to maintain. We could not
+                                    be more happy with our new website! Thanks Abuzar!</p>
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-img">
+                                <img src="img/avatar1.jpg" alt="Clients">
+                            </div>
+                            <div class="user-text">
+                                <h3><span class="style">L</span>illy Jack</h3>
+                                <p>I would highly recommend Abuzar Internet Marketing. They are great to work with. The
+                                    traffic to our website has
+                                    increased thanks to their SEO program.</p>
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-img">
+                                <img src="img/avatar2.jpg" alt="Clients">
+                            </div>
+                            <div class="user-text">
+                                <h3><span class="style">C</span>harlie Eve</h3>
+                                <p>We at Kee Service were very impressed with the all aspects of our new website. We
+                                    would highly reccomend Abuzar to
+                                    anyone looking to build a new website.</p>
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-img">
+                                <img src="img/avatar3.jpg" alt="Clients">
+                            </div>
+                            <div class="user-text">
+                                <h3><span class="style">F</span>reddie</h3>
+                                <p>My new site created by Abuzar just launched. They've done a great job of creating
+                                    exactly what I wanted. Easy to work
+                                    with and very responsive. They met all of my expectations and had a lot of insight
+                                    regarding marketing tools I didn't
+                                    know existed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!------------------ Contact -------------------->
+
+        <div class="container contact" id="contact">
+            <div class="skills-heading service-head">
+                <h4>Get In Touch</h4>
+                <h1 class="scroll">Contact Me</h1>
+            </div>
+            <div class="contact-flex">
+                <div class="contact-card">
+                    <div class="box-contact">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <h3>Email</h3>
+                        <h4>abuzarmunir76@gmail.com</h4>
+                        <p><a href="mailto:abuzarmunir76@gmail.com" target="_blank">Send message</a></p>
+                    </div>
+                    <div class="box-contact">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <h3>Facebook</h3>
+                        <h4>Team Alpha</h4>
+                        <p><a href="https://www.facebook.com/abuzar.munir.545/" target="_blank">Send message</a></p>
+                    </div>
+                    <div class="box-contact">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        <h3>Whatsapp</h3>
+                        <h4>0303-6067849</h4>
+                        <p><a href="https://wa.me/923457886992?" target="_blank">Send message</a></p>
+                    </div>
+                </div>
+
+
+                <div class="inbox-contact">
+                    <form action="send-email.php" method="POST">
+                        <input type="name" name="username" id="name" placeholder="Full Name" autocomplete="off"
+                            required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" autocomplete="on" required>
+                        <input type="textarea" name="message" id="message" placeholder="Your Message" required
+                            class="message">
+                        <input type="button" name="button" id="button" value="Send Message">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!------------------ Footer -------------------->
+        <div class="footer">
+            <div class="footer-logo">
+                <h1>Abuzar</h1>
+            </div>
+            <div class="footer-navbar">
+                <ul>
+                    <li> <a href="#home">HOME</a> </li>
+                    <li> <a href="#about">ABOUT</a> </li>
+                    <li> <a href="#skills">EXPEIRENCE</a> </li>
+                    <li> <a href="#services">SERVICES</a> </li>
+                    <li> <a href="#reviews">TESTIMONIAL</a> </li>
+                    <li> <a href="#contact">CONTACT</a> </li>
+                </ul>
+            </div>
+            <div class="footer-icon">
+                <li><a href="https://www.instagram.com/code_with_jaro/" target="_blank"><ion-icon
+                            name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://www.facebook.com/abuzar.munir.545" target="_blank"><ion-icon
+                            name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://twitter.com/Alpha_Dev_061" target="_blank"><ion-icon
+                            name="logo-twitter"></ion-icon></a></li>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- // ---------------Scroll Reveal CDN/Script---------------------- -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- // ---------------Typed Text Animation CDN/Script---------------------- -->
+
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+
+    <script>
+
+        // <!-- ---------------Scroll Reveal Script/js---------------------- -->  
+        ScrollReveal({
+            reset: true,
+            distance: '200px',
+            duration: 2000,
+            delay: 200
+        });
+        ScrollReveal().reveal('.water-animation , .about-page, .experience-page, .scroll', { origin: 'left' });
+
+
+        // <!-- --------------Title/JS-------------- -->
+        var title = document.title;
+        window.addEventListener("blur", () => {
+            document.title = "Come Back :(";
+        })
+        window.addEventListener("focus", () => {
+            document.title = "Professional PortFolio-Website";
+        });
+        // <!-- --------------TYPED-TEXT-ANIMATION/JS-------------- -->
+        var typed = new Typed(".typed-text-animation", {
+            strings: ["UI/UX DESIGNER", "LAMP STACK DEVELOPER"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true,
+        })
+        // <!-- --------------Let's Talk/JS-------------- -->
+        var chat = document.getElementById('chat');
+        chat.addEventListener("click", () => {
+            var URL = "https://wa.me/923457886992?";
+            window.open(URL, "_blank");
+        });
+        var chatbot = document.getElementById('whatschat');
+        chatbot.addEventListener("click", () => {
+            var URL = "https://wa.me/923457886992?";
+            window.open(URL, "_blank");
+        });
+        // <!-- --------------Smoothly Scrolling/JS-------------- -->
+        // JavaScript code for smooth scrolling
+
+        // Select all the navbar links
+        const navbarLinks = document.querySelectorAll('ul li a');
+
+        // Loop through each navbar link and add a click event listeners
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                // Prevent the default behavior of anchor links
+                event.preventDefault();
+
+                // Get the target section's ID from the link's href attribute
+                const targetId = link.getAttribute('href');
+
+                // Get the target section element using its ID
+                const targetElement = document.querySelector(targetId);
+
+                // Calculate the target section's offset from the top of the page
+                const targetOffset = targetElement.offsetTop;
+
+                // Scroll smoothly to the target section
+                window.scrollTo({
+                    top: targetOffset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+        // <!-- --------------Reviews/Slider--/JS-------------- -->
+        var btn = document.getElementsByClassName("indicator-btn");
+        var slide = document.getElementById("slide");
+
+        btn[0].onclick = function () {
+            slide.style.transform = "translateX(0px)";
+            for (i = 0; i < 4; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[1].onclick = function () {
+            slide.style.transform = "translateX(-370px)";
+            for (i = 0; i < 4; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[2].onclick = function () {
+            slide.style.transform = "translateX(-740px)";
+            for (i = 0; i < 4; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[3].onclick = function () {
+            slide.style.transform = "translateX(-1110px)";
+            for (i = 0; i < 4; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+    </script>
+    <!-- // --------------/PHP-------------- -->
+</body>
+
+</html>
